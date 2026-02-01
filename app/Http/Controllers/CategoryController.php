@@ -12,20 +12,32 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return Category::all();
+        $categories = Category::all();
+        return view("categories.index", ["categories" => $categories]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create() {}
+    public function create()
+    {
+        return view("categories.create");
+    }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'family' => 'nullable|string|max:255'
+        ]);
+
+        Category::create($validated);
+
+        return redirect()->route('categories')->with('success', 'Categoría creada exitosamente');
     }
 
     /**
@@ -33,7 +45,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return response()->json($category);
     }
 
     /**
@@ -41,7 +53,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('categories.edit', ['category' => $category]);
     }
 
     /**
@@ -49,7 +61,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'family' => 'nullable|string|max:255'
+        ]);
+
+        $category->update($validated);
+
+        return redirect()->route('categories')->with('success', 'Categoría actualizada exitosamente');
     }
 
     /**
@@ -57,6 +77,12 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        if (request()->wantsJson()) {
+            return response()->json(['message' => 'Categoría borrada'], 200);
+        }
+
+        return redirect()->route('categories')->with('success', 'Categoría borrada');
     }
 }
