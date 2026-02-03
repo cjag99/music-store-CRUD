@@ -158,6 +158,8 @@ Pese a que existe la posibilidad de registrarse gracias a ``Laravel Breeze``, se
  <table align="center">
  <tr>
      <td align="center">
+         <img src="public/images/welcome.jpg" />
+         <br>
          <strong>Welcome / Landing Page</strong>
      </td>
      <td align="center">
