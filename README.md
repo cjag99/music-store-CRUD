@@ -151,7 +151,7 @@ flowchart TD
     G3 --> H
     G4 --> H
 ```
-## Ususarios de ejemplo de la aplicación
+## Usuarios de ejemplo de la aplicación
 Pese a que existe la posibilidad de registrarse gracias a ``Laravel Breeze``, se proporcionan 6 usuarios de ejemplo que se crean con el método ``Factory`` del modelo User de ``Eloquent``. Todos comparten la misma contraseña ``password``. 5 de ellos poseen un email aleatorio, mientras que el primero tiene como email ``test@example.com`` siendo así el "usuario por defecto".
 ## Vistas de la aplicación
  ### Vistas con middleware guest
@@ -163,29 +163,44 @@ Pese a que existe la posibilidad de registrarse gracias a ``Laravel Breeze``, se
          <strong>Welcome / Landing Page</strong>
      </td>
      <td align="center">
+         <img src="public/images/login.jpg" />
+         <br>
          <strong>Login</strong>
      </td>
      <td align="center">
+         <img src="public/images/register.jpg" />
+         <br>
          <strong>Register</strong>
      </td>
      <td align="center">
+         <img src="public/images/reset.jpg" />
+         <br>
          <strong>Reset password</strong>
      </td>
  </tr>
  </table>
+ 
  ### Vistas con middleware auth
  <table align="center">
  <tr>
      <td align="center">
+         <img src="public/images/dashboard.jpg" />
+         <br>
          <strong>Dashboard</strong>
      </td>
      <td align="center">
+         <img src="public/images/profile.jpg" />
+         <br>
          <strong>Profile</strong>
      </td>
      <td align="center">
+         <img src="public/images/categories.jpg" />
+         <br>
          <strong>Categories index</strong>
      </td>
      <td align="center">
+         <img src="public/images/instruments.jpg" />
+         <br>
          <strong>Instruments index</strong>
      </td>
  </tr>
