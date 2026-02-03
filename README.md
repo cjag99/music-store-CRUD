@@ -1,59 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">Music Store CRUD- Un CRUD con Laravel Breeze</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Descripcion
+Este CRUD es una práctica de Laravel 12 para la asignatura de Desarrollo en entorno servidor de DAW. Simula un catálogo de instrumentos clasificados en distintas categorías. La autenticación y seguridad del acceso a la aplicación corre a cargo de ``Laravel Breeze``.
 
-## About Laravel
+## Tecnologías utilizadas
+<table align="center">
+<tr>
+<td align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" width="160" height="160" />
+  <br>
+  <strong>Laravel 12</strong>
+</td>
+<td align="center">
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/alpinejs/alpinejs-original.svg" width="160" height="160"/>         
+  <br>
+  <strong>Alpinejs</strong>
+</td>
+<td align="center">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" width="160" height="160"/>
+    <br>
+    <strong>Tailwindcss</strong>
+</td>
+    <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" width="160" height="160"/>
+          <br>
+        <strong>Vite</strong>
+    </td>
+</tr>
+</table>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Requisitos previos
+1. Servidor Apache
+2. Php versión ``8.3 o superior``
+3. MySQL versión ``8.0``
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalación
+1. Clone el repositorio:
+   ```bash
+   git clone https://github.com/cjag99/bestiaryAPI.git
+   ```
+2. Instale dependencias:
+   ```bash
+   composer install
+   ```
+3. Crea el fichero ``.env`` con el siguiente comando:
+   ```bash
+   cp .env.example .env
+   ```
+4. Cambie las variables de entorno de conexión a base de datos del fichero ``.env`` siguiendo los ejemplos de ``.env.example``:
+   ```.env
+   DB_CONNECTION=mysql
+   DB_HOST=your_host
+   DB_PORT=your_port
+   DB_DATABASE=your_database
+   DB_USERNAME=your_usernamme
+   DB_PASSWORD=your_password
+   ```
+5. Generar la APP_KEY con el siguiente comando:
+   ```bash
+   php artisan key:generate
+   ```
+6. Realizar la migración de base de datos y el sembrado de datos de ejemplo para la api:
+   ```bash
+   php artisan migrate --seed
+    ```
+7. Como las vistas usan tanto Alpinejs como Tailwind, los cuales necesitan ser compilados por Vite mediante el siguiente comando:
+   ```node
+       npm run build
+   ```
+7. Con esto estaría todo listo. Solo quedaría iniciar la API con el comando:
+   ```bash
+   php artisan serve
+   ```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
