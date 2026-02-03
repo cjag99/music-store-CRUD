@@ -1,6 +1,6 @@
 <h1 align="center">Music Store CRUD- Un CRUD con Laravel Breeze</h1>
 
-## Descripcion
+## Descripción
 Este CRUD es una práctica de Laravel 12 para la asignatura de Desarrollo en entorno servidor de DAW. Simula un catálogo de instrumentos clasificados en distintas categorías. La autenticación y seguridad del acceso a la aplicación corre a cargo de ``Laravel Breeze``.
 
 ## Tecnologías utilizadas
