@@ -1,7 +1,7 @@
 @props([
     'align' => 'right',
     'width' => '48',
-    'contentClasses' => 'py-1 bg-[#B6856A] text-white/90',
+    'contentClasses' => 'py-1 bg-[#B99064] text-white/90',
 ])
 
 @php
@@ -30,7 +30,7 @@
         class="{{ $width }} {{ $alignmentClasses }} absolute z-50 mt-2 rounded-md shadow-lg"
         style="display: none;" @click="open = false">
 
-        <div class="{{ $contentClasses }} rounded-md border border-[#FFF8E722] bg-[#B6856A] text-white/90">
+        <div class="{{ $contentClasses }} rounded-md border border-[#FFF8E722] bg-[#B99064] text-white/90">
             {{ $content }}
         </div>
     </div>

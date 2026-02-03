@@ -46,7 +46,7 @@
         <div class="mt-4 flex items-center gap-2">
             <input type="hidden" name="is_acoustic" value="0">
             <input type="checkbox" id="is_acoustic" name="is_acoustic" value="1"
-                class="h-4 w-4 rounded border-gray-300 text-green-600">
+                class="order-[#3B2F2F33] h-4 w-4 rounded bg-[#FFF8E7] text-[#C49A3A]">
             <label for="is_acoustic" class="text-sm text-[#3B2F2F]">Es acústico</label>
         </div>
 

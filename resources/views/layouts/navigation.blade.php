@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="border-b border-[#FFF8E722] bg-[#B6856A] text-white/90">
+<nav x-data="{ open: false }" class="border-b border-[#FFF8E722] bg-[#B99064] text-white/90">
     <!-- Primary Navigation Menu -->
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 justify-between">
@@ -32,7 +32,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button
-                            class="inline-flex items-center rounded-md border border-[#FFF8E722] bg-[##B6856A] px-3 py-2 text-sm font-medium leading-4 text-white/90 transition hover:border-[#FFF8E744] hover:text-white">
+                            class="inline-flex items-center rounded-md border border-[#FFF8E722] bg-[#B99064] px-3 py-2 text-sm font-medium leading-4 text-white/90 transition hover:border-[#FFF8E744] hover:text-white">
                             <div>{{ Auth::user()->name }}</div>
 
                             <div class="ms-1">

@@ -1522,7 +1522,7 @@
 <body
     class="m-0 flex min-h-screen flex-col items-center bg-[#FDFDFC] px-6 pt-[60px] text-[#1b1b18] lg:px-8 dark:bg-[#0a0a0a]">
 
-    <header class="fixed left-0 top-0 z-50 flex h-14 w-full items-center justify-end bg-[#B6856A] px-6 text-sm">
+    <header class="fixed left-0 top-0 z-50 flex h-14 w-full items-center justify-end bg-[#B99064] px-6 text-sm">
         @if (Route::has('login'))
             <nav class="flex items-center gap-4">
                 @auth
