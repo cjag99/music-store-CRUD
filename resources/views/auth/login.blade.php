@@ -8,33 +8,30 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-text-input id="email" class="mt-1 block w-full" type="email" name="email" :value="old('email')" required
+                autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+            <x-input-label for="password" :value="__('Contraseña')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                type="password"
-                name="password"
-                required autocomplete="current-password" />
+            <x-text-input id="password" class="mt-1 block w-full" type="password" name="password" required
+                autocomplete="current-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <!-- Remember Me -->
-        <div class="block mt-4">
+        <div class="mt-4 block">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox"
-                    class="rounded border-[#3B2F2F33] bg-[#FFF8E7]
-                   text-[#C49A3A]
-                   focus:ring-[#C49A3A] focus:border-[#C49A3A]"
+                    class="rounded border-[#3B2F2F33] bg-[#FFF8E7] text-[#C49A3A] focus:border-[#C49A3A] focus:ring-[#C49A3A]"
                     name="remember">
 
                 <span class="ms-2 text-sm text-[#3B2F2F]">
-                    {{ __('Remember me') }}
+                    {{ __('Recordarme en ese dispositivo') }}
                 </span>
             </label>
         </div>
@@ -42,21 +39,16 @@
 
 
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="mt-4 flex items-center justify-end">
             @if (Route::has('password.request'))
-            <a
-                class="underline text-sm text-[#3B2F2F] dark:text-[#FFF8E7]
-           hover:text-[#C49A3A] dark:hover:text-[#E6C068]
-           rounded-md focus:outline-none focus:ring-2
-           focus:ring-[#C49A3A] focus:ring-offset-2"
-                href="{{ route('password.request') }}">
-                {{ __('Forgot your password?') }}
-            </a>
-
+                <a class="rounded-md text-sm text-[#3B2F2F] underline hover:text-[#C49A3A] focus:outline-none focus:ring-2 focus:ring-[#C49A3A] focus:ring-offset-2 dark:text-[#FFF8E7] dark:hover:text-[#E6C068]"
+                    href="{{ route('password.request') }}">
+                    {{ __('Restablecer contraseña') }}
+                </a>
             @endif
 
             <x-primary-button class="ms-3">
-                {{ __('Log in') }}
+                {{ __('Iniciar sesión') }}
             </x-primary-button>
         </div>
     </form>

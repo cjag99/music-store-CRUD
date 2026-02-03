@@ -30,7 +30,7 @@ class InstrumentController extends Controller
             'weight' => 'nullable|numeric',
             'is_acoustic' => 'nullable|boolean',
             'release_year' => 'nullable|integer',
-            'category_id' => 'nullable|integer|exists:categories,id'
+            'category_id' => 'required|integer|exists:categories,id'
         ]);
 
         Instrument::create($validated);
